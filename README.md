@@ -29,7 +29,7 @@ This C++ project implements a thread-safe command registry with features to add,
 
 #### 1. Clone the repository:
 
-```bash
+```code
 git clone https://github.com/burakcanakinci/thread_safe_command_registry
 cd thread_safe_command_registry
 ```
