@@ -1,6 +1,6 @@
 # Thread-Safe Command Registry
 
-This C++ project implements a thread-safe command registry with the ability to add, remove, and fetch commands. The commands are organized by receiver and include essential information such as command number, receiver, command type, and payload.
+This C++ project implements a thread-safe command registry with features to add, remove, and fetch commands. The command registry ensures thread safety using mutexes to handle concurrent access.
 
 ## Table of Contents
 
@@ -9,15 +9,15 @@ This C++ project implements a thread-safe command registry with the ability to a
   - [Prerequisites](#prerequisites)
   - [Building the Project](#building-the-project)
 - [Usage](#usage)
-  - [Example Usage](#example-usage)
+- [Example Scenario](#example-scenario)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
-- Thread-safe implementation using `std::mutex`
-- Addition, removal, and fetching of commands
-- Organization of commands by receiver, receiver command number, and global command number
+- Thread-safe command registry
+- Adding a batch of commands
+- Removing a batch of commands
+- Fetching commands for a specific receiver
 
 ## Getting Started
 
@@ -27,8 +27,52 @@ This C++ project implements a thread-safe command registry with the ability to a
 
 ### Building the Project
 
-1. Clone the repository:
+#### 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/command-registry.git
-cd command-registry
+git clone https://github.com/burakcanakinci/thread_safe_command_registry
+cd thread_safe_command_registry
+```
+
+#### 2. Build the project:
+
+```bash
+g++ -o command_registry main.cpp -std=c++11 -pthread
+```
+
+### Usage
+
+Run the compiled executable:
+
+```bash
+./command_registry
+```
+Follow the on-screen instructions to add, fetch, and remove commands.
+
+## Menu Options
+
+0. Set memory size: Set the size of the memory at runtime.
+1. Allocate (First Fit): Allocate memory for a process using the First Fit algorithm.
+2. Allocate (Best Fit): Allocate memory for a process using the Best Fit algorithm.
+3. Deallocate: Deallocate memory previously allocated for a process.
+4. Display Memory: Display the current state of memory.
+5. Exit: Exit the Memory Manager Simulator.
+ 
+## Example Scenario
+
+1. Do you want to add a command? (y/n): y
+
+-- Enter receiver_cmd_num, receiver, and cmd_type separated by spaces (e.g. 1 101 1): 1 101 1
+-- Command 1 101 1 is added
+2. Do you want to add a command? (y/n): n
+
+3. Fetch commands for receiver 101 starting from command number 0:
+
+-- Fetched Receiver: 101, CmdNum: 1, CmdType: 1, Global CmdNum: 1
+4. Remove commands for receiver 101 with command number 1:
+
+-- Command 1 101 1 is removed
+
+## Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests.
