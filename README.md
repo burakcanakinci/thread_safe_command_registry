@@ -51,16 +51,16 @@ Follow the on-screen instructions to add, fetch, and remove commands.
  
 ## Example Scenario
 
-1. Do you want to add a command? (y/n): y
+- Do you want to add a command? (y/n): y
   - Enter receiver_cmd_num, receiver, and cmd_type separated by spaces (e.g. 1 101 1): 1 101 1
   - Command 1 101 1 is added
 
-2. Do you want to add a command? (y/n): n
+- Do you want to add a command? (y/n): n
 
-3. Fetch commands for receiver 101 starting from command number 0:
+- Fetch commands for receiver 101 starting from command number 0:
   - Fetched Receiver: 101, CmdNum: 1, CmdType: 1, Global CmdNum: 1
 
-4. Remove commands for receiver 101 with command number 1:
+- Remove commands for receiver 101 with command number 1:
   - Command 1 101 1 is removed
 
 ## Contributing
