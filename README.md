@@ -37,7 +37,7 @@ cd thread_safe_command_registry
 #### 2. Build the project:
 
 ```bash
-g++ -o command_registry main.cpp -std=c++11 -pthread
+g++ -o command_registry main.cpp
 ```
 
 ### Usage
